@@ -14,7 +14,11 @@ public class PlayerShmovement : MonoBehaviour
     }
 
    
-    void Update()
+    void FixedUpdate()
+    {
+        Move();
+    }
+    private void Move()
     {
         var playerInput =
             new Vector2(x: Input.GetAxis("Horizontal"), y: Input.GetAxis("Vertical"));
