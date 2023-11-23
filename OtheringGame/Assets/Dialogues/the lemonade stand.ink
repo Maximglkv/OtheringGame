@@ -1,2 +1,2 @@
 Hey 
-Do you sell any GRAPES? 
+Do you have any GRAPES? 

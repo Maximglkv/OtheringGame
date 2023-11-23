@@ -17,7 +17,7 @@ public class DialogeTrigger : MonoBehaviour
         playerInRange = false;
         visualCue.SetActive(false);
     }
-/*
+
     private void Update()
     {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
@@ -33,7 +33,7 @@ public class DialogeTrigger : MonoBehaviour
             visualCue.SetActive(false);
         }
     }
-*/
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Player")
