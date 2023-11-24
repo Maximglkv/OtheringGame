@@ -2,18 +2,32 @@ Hey ! #speaker:Player #portrait:player_normal #layout:left
 -> main
 
 ===main===
-Got any GRAPES?#speaker:Player #portrait:player_normal #layout:left
-+ [*waddle away*]
+Test question with options?#speaker:Player #portrait:player_normal #layout:left
++ [*bruh*]
     And he waddled away~ #portrait:player_normal
 +[cool]
-    They got GRAPES #portrait:player_normal
+    very cool #portrait:player_normal
 +[Goodbye]
-    bruh #portrait:player_normal
+    alright then #portrait:player_normal
     
-- We never sold grapes here #speaker:Stand #portrait:stand_normal #layout:right
+- Different character speech and portrait #speaker:Parent #portrait:stand_normal #layout:right
 
-was it cool?#speaker:Player #portrait:player_normal #layout:left
+animations are also possible?#speaker:Player #portrait:player_normal #layout:left
 + [yeah]
-    -> END
+    -> animation
 + [nah] 
+    -> END
+
+-> animation
+
+===animation===
+techonogy is here! #speaker:Player #portrait:player_animation #layout:left
++ [wow]
+    very cool 
+    -> END
++ [not bad]
+    i guess
+    ->END
++ [nothing spetial]
+    ok and?
     -> END
