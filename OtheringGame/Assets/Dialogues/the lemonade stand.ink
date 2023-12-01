@@ -1,2 +1,3 @@
-Hey 
-Do you have any GRAPES? 
+here is your triangle you asked for 
+bruh
+
