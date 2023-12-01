@@ -2,35 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogeTrigger : MonoBehaviour
+public class ItemGrabber : MonoBehaviour
 {
-    [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue;
-
-    [Header("Ink JSON")]
-    [SerializeField] public TextAsset inkJSON;
-
     private bool playerInRange;
+    [SerializeField] private GameObject Item;
+    public ÑhangeDialgoue change;
+
 
     private void Awake()
     {
         playerInRange = false;
-        visualCue.SetActive(false);
+        
+
     }
 
     private void Update()
     {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            visualCue.SetActive(true);
+            
             if (InputManager.GetInstance().GetInteractPressed())
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                change.ChangeDialogue();
+                 Item.SetActive(false);
             }
-        }
-        else
-        {
-            visualCue.SetActive(false);
         }
     }
 
