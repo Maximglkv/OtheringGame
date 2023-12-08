@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1023158849}
-  inkJSON: {fileID: 4900000, guid: 689bd3b0a86e19746925227af229463e, type: 3}
+  inkJSON: {fileID: 4900000, guid: debef3d65fc7c084aac13d9bb1d0c965, type: 3}
 --- !u!1 &181794684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,7 +2675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogeTrigger: {fileID: 180724482}
-  newDialogue: {fileID: 4900000, guid: 4c914b891ffd45d4bb3841a660777dd2, type: 3}
+  newDialogue: {fileID: 4900000, guid: 6fda86304a3ef344f8e2b540bf979229, type: 3}
 --- !u!114 &857888871
 MonoBehaviour:
   m_ObjectHideFlags: 0
