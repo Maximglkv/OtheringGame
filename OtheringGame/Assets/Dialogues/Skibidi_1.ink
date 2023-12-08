@@ -1,6 +1,6 @@
-Hey pookie bear, could you do me a favour?
-+[Of course!]
-Great, it'll only take a second.
+Hey pookie bear, could you do me a favour?#speaker:Parent #portrait:stand_normal #layout
++[Of course!]#speaker:Player #portrait:player_normal #layout:left
+Great, it'll only take a second.#speaker:Parent #portrait:stand_normal #layout
 +[Sure]
 Great, it'll only take a second.
 +[No thanks, I'm busy actually...]

@@ -1,4 +1,4 @@
-Thank you so much!
+Thank you so much!#speaker:Parent #portrait:stand_normal #layout
 
 -Do you mind doing one more thing?
 +[Not at all!]
