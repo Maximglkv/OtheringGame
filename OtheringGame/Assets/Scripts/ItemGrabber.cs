@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class ItemGrabber : MonoBehaviour
 {
     private bool playerInRange;
     [SerializeField] private GameObject Item;
-    public �hangeDialgoue change;
+    public СhangeDialgoue change;
 
 
     private void Awake()
