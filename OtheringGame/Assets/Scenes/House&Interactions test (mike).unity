@@ -1380,7 +1380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1023158849}
-  inkJSON: {fileID: 4900000, guid: debef3d65fc7c084aac13d9bb1d0c965, type: 3}
+  inkJSON: {fileID: 4900000, guid: 1c605687346178b40a037a2d879cd7cf, type: 3}
 --- !u!1 &181794684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,7 +6219,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e67b1c1fb170d0343a9ead3d776ab5ec, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -18743,7 +18743,7 @@ Transform:
   m_GameObject: {fileID: 1837560828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.42, y: 2.1, z: -9.9023485}
+  m_LocalPosition: {x: 7.69, y: 2.1, z: -9.9023485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20891,7 +20891,7 @@ Transform:
   m_GameObject: {fileID: 2103229770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.42, y: 2.1, z: 0.097651035}
+  m_LocalPosition: {x: 7.69, y: 2.1, z: 0.097651035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
