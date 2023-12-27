@@ -1,3 +1,4 @@
+EXTERNAL RythmGame()
 ->main
 ===main===
 //player
@@ -43,8 +44,8 @@ Here's a list of songs I want played at my funeral. I'm sorry to say this but I 
 I understand#speaker:Player #portrait:player_normal #layout:left
 
 She takes the paper and hugs her father.#speaker:Player #portrait:player_normal #layout:left
-Mini game starts
 
+/*
 Mini game ends
 
 //father
@@ -64,4 +65,6 @@ I promise I will remember you..I love you, Dad.#speaker:Player #portrait:player_
 
 //father
 I love you too
-->END
+*/
+~ RythmGame()
+->END 

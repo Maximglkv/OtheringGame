@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
+    [SerializeField] private GameObject RythmMinigame;
+    [SerializeField] private float typingSpeed = 0.04f;
     private Animator layoutAnimator;
 
     [Header("Choices UI")]
@@ -20,9 +23,12 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
-    public bool dialogueIsPlaying { get; private set; }
+
+    private bool canContinueToNextLine = false;
+    public bool dialogueIsPlaying { get; set; }
 
     private static DialogueManager instance;
+    private Coroutine displayLineCoroutine;
 
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
@@ -70,7 +76,7 @@ public class DialogueManager : MonoBehaviour
 
         // handle continuing to the next line in the dialogue when submit is pressed
         // NOTE: The 'currentStory.currentChoiecs.Count == 0' part was to fix a bug after the Youtube video was made
-        if (currentStory.currentChoices.Count == 0 && InputManager.GetInstance().GetSubmitPressed())
+        if (canContinueToNextLine && currentStory.currentChoices.Count == 0 && InputManager.GetInstance().GetSubmitPressed())
         {
             ContinueStory();
         }
@@ -81,6 +87,13 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        currentStory.BindExternalFunction("RythmGame", () =>
+        {
+            RythmMinigame.SetActive(true);
+            dialogueIsPlaying = true;
+
+
+        });
 
         // reset portrait, layout, and speaker
         displayNameText.text = "???";
@@ -93,6 +106,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
+        currentStory.UnbindExternalFunction("RythmGame");
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -103,16 +117,59 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            
             // set text for the current dialogue line
-            dialogueText.text = currentStory.Continue();
-            // display choices, if any, for this dialogue line
-            DisplayChoices();
+            string nextLine = currentStory.Continue();
             // handle tags
-            HandleTags(currentStory.currentTags);
+           
+            
+            if (nextLine.Equals("") && !currentStory.canContinue) 
+            {
+                StartCoroutine(ExitDialogueMode()); 
+            }
+            else
+            {
+                HandleTags(currentStory.currentTags);
+                displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
+            }
+            
+
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
+        }
+    }
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+        canContinueToNextLine = false;
+        HideChoices();
+        foreach (char letter in line.ToCharArray())
+        {
+            if (InputManager.GetInstance().GetSubmitPressed())
+            {
+                dialogueText.text = line;
+                break;
+            }
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+        // display choices, if any, for this dialogue line
+        DisplayChoices();
+
+        canContinueToNextLine = true;
+    }
+
+    private void HideChoices()
+    {
+        foreach (GameObject choiceButton in choices)
+        {
+            choiceButton.SetActive(false);
         }
     }
 
@@ -188,9 +245,13 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        InputManager.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
-        ContinueStory();
+        if (canContinueToNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            InputManager.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
+            ContinueStory();
+        }
+        
     }
 
 }

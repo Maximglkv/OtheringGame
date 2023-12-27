@@ -15,6 +15,9 @@ public class SongManager : MonoBehaviour
     public Lane[] lanes;
     public float songDelayInSeconds;
     public double marginOfError; // in seconds
+    public DialogueManager dialogueManager;
+    [SerializeField] private GameObject RythmMinigame;
+
 
     public int inputDelayInMilliseconds;
 
@@ -94,6 +97,15 @@ public class SongManager : MonoBehaviour
 
     void Update()
     {
+        if (!audioSource.isPlaying)
+        {
+            dialogueManager.dialogueIsPlaying = false;
+            RythmMinigame.SetActive(false);
+        }
+        if (audioSource.isPlaying)
+        {
+            dialogueManager.dialogueIsPlaying = true;
+        }
 
     }
 }
