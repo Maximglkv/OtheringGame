@@ -36,7 +36,7 @@ public class GreenManager : MonoBehaviour
         // Array of tag pairs for comparison
         string[,] tagPairs = new string[,]
         {
-            { "piggy 2", "pig" },
+            { "pig 2", "pig" },
             { "Check Item 2", "InvenSlot2" },
             { "Check Item 3", "InvenSlot3" },
             { "Check Item 4", "InvenSlot4" }
