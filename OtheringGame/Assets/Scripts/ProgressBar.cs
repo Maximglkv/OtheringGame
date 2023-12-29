@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -16,6 +17,7 @@ public class ProgressBar : MonoBehaviour
     private UnityEvent<float> OnProgress;
     [SerializeField]
     private UnityEvent OnCompleted;
+
 
     private Coroutine AnimationCoroutine;
 
@@ -72,4 +74,5 @@ public class ProgressBar : MonoBehaviour
         OnProgress?.Invoke(Progress);
         OnCompleted?.Invoke();
     }
+
 }

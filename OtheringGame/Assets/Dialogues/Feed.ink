@@ -1,3 +1,4 @@
+EXTERNAL FeedGame()
 //player
 Dad, it's time for your feeding.#speaker:Player #portrait:player_normal #layout:left
 
@@ -8,17 +9,17 @@ Thank you, sweetheart.#speaker:Father #portrait:parent_normal #layout:left
 
 player carefully attaches the feeding tube to the syringe and starts the process.#speaker: #portrait:Empty #layout:left
 
-//player
-+Are you ready? Dad let me know if your comfortable 
-+Is this okay? This my first time doing this without mom
+//player 
++Are you ready? Dad let me know if your comfortable #speaker:Player #portrait:player_normal #layout:left
++Is this okay? This my first time doing this without mom #speaker:Player #portrait:player_normal #layout:left
 
 //Father
 Yes, it's fine.#speaker:Father #portrait:parent_normal #layout:left
 
-After mini game 
+ ~FeedGame()
 
 
-
+/*
 player finishes the feeding, disconnects the tube, and tidies up.#speaker: #portrait:Empty #layout:left
 
 //player (CONT'D)
@@ -38,3 +39,4 @@ It's my turn to take care of you, Dad. You've always been there for me.#speaker:
 
 //father
 Thank you YN#speaker:Father #portrait:parent_normal #layout:left
+/*

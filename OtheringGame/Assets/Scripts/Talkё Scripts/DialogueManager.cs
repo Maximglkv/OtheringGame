@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private GameObject RythmMinigame;
+    [SerializeField] private GameObject FeedMinigame;
     [SerializeField] private float typingSpeed = 0.04f;
     private Animator layoutAnimator;
 
@@ -94,6 +95,11 @@ public class DialogueManager : MonoBehaviour
 
 
         });
+        currentStory.BindExternalFunction("FeedGame", () =>
+        {
+            FeedMinigame.SetActive(true);
+        });
+            
 
         // reset portrait, layout, and speaker
         displayNameText.text = "???";
