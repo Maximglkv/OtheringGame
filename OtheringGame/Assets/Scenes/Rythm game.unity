@@ -424,8 +424,10 @@ MonoBehaviour:
   - {fileID: 155160576}
   songDelayInSeconds: 1
   marginOfError: 0.2
+  dialogueManager: {fileID: 0}
+  RythmMinigame: {fileID: 0}
   inputDelayInMilliseconds: 0
-  fileLocation: brehu.mid
+  fileLocation: Que.mid
   noteTime: 1
   noteSpawnY: 7
   noteTapY: -3
@@ -471,7 +473,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d962ddd53a3eede4fab95645f5efcedb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1f0238ae0cb2c974dbd145613d560ac6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.358
   m_Pitch: 1

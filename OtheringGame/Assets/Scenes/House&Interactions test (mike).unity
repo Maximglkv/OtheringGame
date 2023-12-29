@@ -260,9 +260,10 @@ MonoBehaviour:
   songDelayInSeconds: 0
   marginOfError: 0.2
   dialogueManager: {fileID: 60600659}
-  RythmMinigame: {fileID: 1458327006}
+  RythmMinigame: {fileID: 1567619010}
+  inkJSON: {fileID: 4900000, guid: 0cdebd1d29c6f7949a0b3f76110a12f4, type: 3}
   inputDelayInMilliseconds: 0
-  fileLocation: brehu.mid
+  fileLocation: Que.mid
   noteTime: 1
   noteSpawnY: 7
   noteTapY: -3
@@ -2066,7 +2067,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d962ddd53a3eede4fab95645f5efcedb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1f0238ae0cb2c974dbd145613d560ac6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.358
   m_Pitch: 1
@@ -16586,7 +16587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteRestriction: 5
   input: 100
-  notePrefab: {fileID: 2149554260707034438, guid: edc2e4199e050d843b0936ea7490ede1, type: 3}
+  notePrefab: {fileID: 3175238902389648638, guid: a6ed8f2c71e5d7740b69659901852450, type: 3}
   timeStamps: []
 --- !u!1 &1554310997
 GameObject:

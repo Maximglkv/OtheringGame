@@ -17,6 +17,8 @@ public class SongManager : MonoBehaviour
     public double marginOfError; // in seconds
     public DialogueManager dialogueManager;
     [SerializeField] private GameObject RythmMinigame;
+    [Header("Ink JSON")]
+    [SerializeField] public TextAsset inkJSON;
 
 
     public int inputDelayInMilliseconds;
@@ -101,6 +103,8 @@ public class SongManager : MonoBehaviour
         {
             dialogueManager.dialogueIsPlaying = false;
             RythmMinigame.SetActive(false);
+            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+
         }
         if (audioSource.isPlaying)
         {
