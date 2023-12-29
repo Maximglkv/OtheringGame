@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: BluePill
   m_EditorClassIdentifier: 
   type: 0
-  actionType: 0
-  range: {x: 5, y: 4}
+  IDNumba: 1
   stackable: 0
   image: {fileID: 21300000, guid: dadd6595e8f95454aa79cfa04fe92673, type: 3}

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: WhitePill
   m_EditorClassIdentifier: 
   type: 0
-  actionType: 0
-  range: {x: 5, y: 4}
+  IDNumba: 3
   stackable: 0
   image: {fileID: 21300000, guid: 3220e8d2f93c42f4889c825b8af321ca, type: 3}

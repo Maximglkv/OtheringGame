@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - pig
+  - piggy 2
+  - Check Item 2
+  - Check Item 3
+  - Check Item 4
+  - InvenSlot2
+  - InvenSlot3
+  - InvenSlot4
+  - pig 2
   layers:
   - Default
   - TransparentFX

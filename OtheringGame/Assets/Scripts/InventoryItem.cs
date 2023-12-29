@@ -15,30 +15,36 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
 
-    public void InitialiseItem(Item newItem) {
+
+    public void InitialiseItem(Item newItem) 
+    {
         item = newItem;
         image.sprite = newItem.image;
         RefreshCount();
     }
 
-    public void RefreshCount() {
+    public void RefreshCount() 
+    {
         countText.text = count.ToString();
         bool textActive = count > 1;
         countText.gameObject.SetActive(textActive);
     }
 
     // Drag and drop
-    public void OnBeginDrag(PointerEventData eventData) {
+    public void OnBeginDrag(PointerEventData eventData) 
+    {
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
     }
 
-    public void OnDrag(PointerEventData eventData) {
+    public void OnDrag(PointerEventData eventData) 
+    {
         transform.position = Input.mousePosition;
     }
 
-    public void OnEndDrag(PointerEventData eventData) {
+    public void OnEndDrag(PointerEventData eventData) 
+    {
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
     }

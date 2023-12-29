@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4506960229413384353}
   - component: {fileID: 2842674248792950810}
   - component: {fileID: 7682342096941758181}
+  - component: {fileID: -8527349468523408761}
   m_Layer: 5
   m_Name: InvenItem
   m_TagString: Untagged
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dadd6595e8f95454aa79cfa04fe92673, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -175,3 +176,16 @@ MonoBehaviour:
   item: {fileID: 0}
   count: 1
   parentAfterDrag: {fileID: 0}
+--- !u!114 &-8527349468523408761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171193329580482428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
