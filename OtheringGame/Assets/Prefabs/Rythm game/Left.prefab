@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6639388070413133148}
   - component: {fileID: 41365482659621365}
   - component: {fileID: 3585048081365434205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 1de060affa9d54749be2141e0ecf9922, type: 3}
   m_Color: {r: 0.9307935, g: 1, b: 0, a: 1}
   m_FlipX: 0
