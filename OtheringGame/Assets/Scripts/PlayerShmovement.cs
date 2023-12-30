@@ -40,6 +40,9 @@ public class PlayerShmovement : MonoBehaviour
         _rigidbody.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
 
         
+        anim.SetFloat("X", moveDirection.x);
+        anim.SetFloat("Y", moveDirection.y);
+
         if(moveDirection != Vector2.zero)
         {
             if(!isWalking)
