@@ -45,7 +45,7 @@ public class FeedingMinigame : MonoBehaviour
     {
         
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || (Input.GetKeyDown(KeyCode.Space)))
         {
             rb.AddForce(Vector2.right * movePerClick, ForceMode2D.Impulse);
         }
