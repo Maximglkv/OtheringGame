@@ -1,4 +1,5 @@
 EXTERNAL Credits_BG()
+EXTERNAL Dark_BG()
 //father
 Can you promise me something? I have one request#speaker:Father #portrait:parent_normal #layout:left
 //player
@@ -24,5 +25,12 @@ I promise I will remember you..I love you, Dad.#speaker:Player #portrait:player_
 
 //father
 I love you too#speaker:Player #portrait:player_sad #layout:left
+~Dark_BG()
+
+Few years later...#speaker: #portrait:Empty #layout:left
+
+
 ~Credits_BG()
+  
+  
 ->END

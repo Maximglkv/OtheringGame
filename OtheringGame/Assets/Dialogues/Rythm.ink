@@ -43,7 +43,7 @@ Here's a list of songs I want played at my funeral. I'm sorry to say this but I 
 //Player
 I understand#speaker:Player #portrait:player_normal #layout:left
 
-She takes the paper and hugs her father.#speaker:Player #portrait:player_normal #layout:left
+She takes the paper and hugs her father.#speaker: #portrait:Empty #layout:left
 
 /*
 Mini game ends

@@ -1,9 +1,13 @@
 EXTERNAL Neighbour_BG()
 EXTERNAL Park_BG()
+EXTERNAL Dark_BG()
+~Dark_BG()
 Dad, are we going yet?#speaker:Player #portrait:player_normal #layout:left
 Absolutely, Y/N! Let's go have some fun.#speaker:Parent #portrait:parent_sad #layout:right
+~Neighbour_BG()
+
 ->NEIGHBORHOOD_DAY
-~ Neighbour_BG()
+//~Neighbour_BG()
 ===NEIGHBORHOOD_DAY===
 
 Father and Player step out of their house, heading toward their car parked in the driveway. Player clutches her kite tightly, eyes gleaming with anticipation.#speaker: #portrait:Empty #layout:right
@@ -13,8 +17,9 @@ Can I drive, Dad?#speaker:Player #portrait:player_happy #layout:left
 Not yet, sweetie. But you can sit up front and help reading the GPS #speaker:Parent #portrait:parent_normal #layout:right
 
 Player hops into the passenger seat, carefully buckling up as her father starts the car. She points out directions, guiding him toward the park.#speaker: #portrait:Empty #layout:right
-->EXT_CITY_PARK_DAY
 ~Park_BG()
+->EXT_CITY_PARK_DAY
+//~Park_BG()
 ===EXT_CITY_PARK_DAY===
 
 They arrive at the serene park. Father parks the car as player jumps out, her kite fluttering in the wind.#speaker: #portrait:Empty #layout:right

@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using DG.Tweening;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -18,11 +19,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject FeedMinigame;
     [SerializeField] private GameObject PillMinigame;
     [SerializeField] private GameObject Park_BG;
+    [SerializeField] private GameObject Dark_BG;
     [SerializeField] private GameObject Neighbour_BG;
     [SerializeField] private GameObject Credits_BG;
     [SerializeField] private float typingSpeed = 0.04f;
     [SerializeField] private GameObject Volume;
+    [SerializeField] public TextAsset IntroDialogue;
     private Animator layoutAnimator;
+  //  public Fadeandstuff fader;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -70,6 +74,7 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
+        DialogueManager.GetInstance().EnterDialogueMode(IntroDialogue);
     }
 
     private void Update()
@@ -101,6 +106,8 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        
+        
        
         currentStory.BindExternalFunction("RythmGame", () =>
         {
@@ -122,8 +129,8 @@ public class DialogueManager : MonoBehaviour
         });
         currentStory.BindExternalFunction("Park_BG", () =>
         {
-            Neighbour_BG.SetActive(false);
             Park_BG.SetActive(true);
+            Neighbour_BG.SetActive(false);
             dialogueIsPlaying = true;
 
 
@@ -140,6 +147,14 @@ public class DialogueManager : MonoBehaviour
         {
            // Park_BG.SetActive(false);
             Credits_BG.SetActive(true);
+            dialogueIsPlaying = true;
+
+
+        });
+        currentStory.BindExternalFunction("Dark_BG", () =>
+        {
+            
+            Dark_BG.SetActive(true);
             dialogueIsPlaying = true;
 
 
@@ -161,11 +176,13 @@ public class DialogueManager : MonoBehaviour
         currentStory.UnbindExternalFunction("FeedGame");
         currentStory.UnbindExternalFunction("PillGame");
         currentStory.UnbindExternalFunction("Park_BG");
+        currentStory.UnbindExternalFunction("Dark_BG");
         currentStory.UnbindExternalFunction("Neighbour_BG");
         currentStory.UnbindExternalFunction("Credits_BG");
         Volume.SetActive(true);
         Park_BG.SetActive(false);
         Neighbour_BG.SetActive(false);
+        Dark_BG.SetActive(false);
 
 
         dialogueIsPlaying = false;
