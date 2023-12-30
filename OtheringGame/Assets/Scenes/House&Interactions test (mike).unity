@@ -403,7 +403,7 @@ MonoBehaviour:
   FeedMinigame: {fileID: 0}
   PillMinigame: {fileID: 0}
   typingSpeed: 0.04
-  Volume: {fileID: 2103229770}
+  Volume: {fileID: 583615526}
   choices:
   - {fileID: 1151036682}
   - {fileID: 1081190621}
@@ -4542,7 +4542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &427843183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7274,7 +7274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &679852477
 Transform:
   m_ObjectHideFlags: 0
@@ -20473,7 +20473,7 @@ Transform:
   m_GameObject: {fileID: 1837560828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.52, y: 17.33, z: -9.938019}
+  m_LocalPosition: {x: -71.26, y: 15.27, z: -9.938019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22100,6 +22100,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5bb69b73-57ad-4641-8a8a-d98e53ab29a6
     m_ActionName: game/submit[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 82e317d7-1338-42de-a926-bd5cd5f177d3
+    m_ActionName: game/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a889b90-6386-45a2-a495-3dd7081b0d2f
+    m_ActionName: game/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30a0bcfe-20e6-4c34-ae2f-7e4226fa20ac
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a6d6cae-dd55-4caf-b0c8-3a6c37194dee
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5d3835d4-7768-4d98-88a1-9a64c4ad7398
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 48f87857-b3cb-4e21-8af8-2c28060a8c46
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8fb2ddaa-4ba5-4c00-94e9-1a509f502b62
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fab16270-3b78-480b-bba7-e18db25bba4f
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4f1f1e0f-4421-412a-a385-e2cd6f89b135
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c351dae9-3487-4eb8-acdc-e997f8bc17f5
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d369bd82-3993-43cd-b761-8a355cd5fcb5
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9d19ce69-5eb7-4583-a132-a4fe70a539e0
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: game
@@ -22754,8 +22802,8 @@ Transform:
   m_GameObject: {fileID: 2103229770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.52, y: 17.33, z: 0.061981}
-  m_LocalScale: {x: 0.6347288, y: 0.6347288, z: 0.6347288}
+  m_LocalPosition: {x: -71.26, y: 15.27, z: 0.061981}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.6347288}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1729025843}
@@ -22797,7 +22845,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.77, y: 11.250977}
+    oldSize: {x: 5.3, y: 11.51123}
     newSize: {x: 4.77, y: 11.250977}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -22868,7 +22916,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -745260258, guid: a5b5bd6a10e58104d911444b451dda44, type: 3}
+  m_Sprite: {fileID: -1957252019, guid: 8ed8ac9addded934aa180f16122f3d28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
