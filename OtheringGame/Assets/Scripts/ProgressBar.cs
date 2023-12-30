@@ -72,7 +72,11 @@ public class ProgressBar : MonoBehaviour
 
         ProgressImage.fillAmount = Progress;
         OnProgress?.Invoke(Progress);
-        OnCompleted?.Invoke();
+       // OnCompleted?.Invoke();
+       if (Progress >= 1)
+        {
+            OnCompleted?.Invoke();
+        }
     }
 
 }
