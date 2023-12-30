@@ -10,14 +10,17 @@ public class Checker : MonoBehaviour
 
     public GameObject incorrect;
     public GameObject correct;
-    
+    public GameObject yipeee;
+
     public void Comparison()
     {
         bool result = greenManager.CompareAllSlotItems();
         
         if(result)
-        {
+        {   
+            yipeee.SetActive(true);
             correct.SetActive(false);
+            
         }
 
         else 
