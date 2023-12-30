@@ -17,14 +17,12 @@ public class Checker : MonoBehaviour
         
         if(result)
         {
-            incorrect.SetActive(false);
-            correct.SetActive(true);
+            correct.SetActive(false);
         }
 
         else 
         {
             incorrect.SetActive(true);
-            correct.SetActive(false);
         }
     }
 

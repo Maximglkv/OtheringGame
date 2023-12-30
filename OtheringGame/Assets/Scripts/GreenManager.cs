@@ -30,46 +30,34 @@ public class GreenManager : MonoBehaviour
 
     // Method to compare all pairs of items based on an array of tags
     public bool CompareAllSlotItems()
+{
+    // Array of tag pairs for comparison
+    string[,] tagPairs = new string[,]
     {
-        bool allMatch = true;
+        { "pig 2", "pig" },
+        { "Check Item 2", "InvenSlot2" },
+        { "Check Item 3", "InvenSlot3" },
+        { "Check Item 4", "InvenSlot4" }
+    };
 
-        
+    for (int i = 0; i < tagPairs.GetLength(0); i++)
+    {
+        string tag1 = tagPairs[i, 0];
+        string tag2 = tagPairs[i, 1];
 
-        // Array of tag pairs for comparison
-        string[,] tagPairs = new string[,]
-        {
-            { "pig 2", "pig" },
-            { "Check Item 2", "InvenSlot2" },
-            { "Check Item 3", "InvenSlot3" },
-            { "Check Item 4", "InvenSlot4" }
-        };
+        bool match = CompareTwoSlotItems(tag1, tag2);
+        Debug.Log($"Comparison between slots '{tag1}' and '{tag2}': {match}");
 
-        for (int i = 0; i < tagPairs.GetLength(0); i++)
-        {
-            string tag1 = tagPairs[i, 0];
-            string tag2 = tagPairs[i, 1];
-
-            bool match = CompareTwoSlotItems(tag1, tag2);
-            Debug.Log($"Comparison between slots '{tag1}' and '{tag2}': {match}");
-
-            // If any pair doesn't match, set allMatch to false
-            if (!match)
-            {
-                allMatch = false;
-            }
-        }
-
-        // Final result
-        if (allMatch)
-        {
-            Debug.Log("All items match.");
-           
-        }
-        else
+        // If any pair doesn't match, return false
+        if (!match)
         {
             Debug.Log("Not all items match.");
-        
+            return false;
         }
-        return false;
-    } 
+    }
+
+    // If the loop completes without returning false, all items match
+    Debug.Log("All items match.");
+    return true;
+}
 }
