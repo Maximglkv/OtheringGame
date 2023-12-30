@@ -12,9 +12,15 @@ public class PlayerShmovement : MonoBehaviour
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
 
+    public Animator anim;
+    private bool isWalking;
+
+
     void Start()
     {
-      _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        isWalking = false;
     }
 
    
@@ -24,11 +30,32 @@ public class PlayerShmovement : MonoBehaviour
         {
             return;
         }
+
         Move();
+
     }
     private void Move()
     {
         Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
         _rigidbody.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+
+        
+        if(moveDirection != Vector2.zero)
+        {
+            if(!isWalking)
+            {
+                isWalking = true;
+                anim.SetBool("IsMoving", isWalking);
+            }
+        }
+        
+        else
+        {
+            if(isWalking)
+            {
+                isWalking = false;
+                anim.SetBool("IsMoving", isWalking);
+            }
+        }
     }
 }
