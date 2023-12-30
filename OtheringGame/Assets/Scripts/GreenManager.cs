@@ -33,6 +33,8 @@ public class GreenManager : MonoBehaviour
     {
         bool allMatch = true;
 
+        
+
         // Array of tag pairs for comparison
         string[,] tagPairs = new string[,]
         {
@@ -61,10 +63,12 @@ public class GreenManager : MonoBehaviour
         if (allMatch)
         {
             Debug.Log("All items match.");
+           
         }
         else
         {
             Debug.Log("Not all items match.");
+        
         }
     }
 }

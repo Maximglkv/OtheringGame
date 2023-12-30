@@ -10,12 +10,11 @@ public class Checker : MonoBehaviour
 
     public GameObject incorrect;
     public GameObject correct;
-
-
     
     public void Comparison()
     {
         greenManager.CompareAllSlotItems();
+        
     }
 
 }
