@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject RythmMinigame;
     [SerializeField] private GameObject FeedMinigame;
     [SerializeField] private float typingSpeed = 0.04f;
+    [SerializeField] private GameObject Volume;
     private Animator layoutAnimator;
 
     [Header("Choices UI")]
@@ -88,6 +89,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        Volume.SetActive(true);
         currentStory.BindExternalFunction("RythmGame", () =>
         {
             RythmMinigame.SetActive(true);
