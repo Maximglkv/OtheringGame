@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogeTrigger : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class DialogeTrigger : MonoBehaviour
 
     [Header("Ink JSON")]
     [SerializeField] public TextAsset inkJSON;
+
+  //  public GameObject thisTrigger;
+    
+    [SerializeField] private UnityEvent NextActive;
 
     private bool playerInRange;
 
@@ -26,6 +31,7 @@ public class DialogeTrigger : MonoBehaviour
             if (InputManager.GetInstance().GetInteractPressed())
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                NextActive?.Invoke();
             }
         }
         else
