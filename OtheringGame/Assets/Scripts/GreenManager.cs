@@ -29,7 +29,7 @@ public class GreenManager : MonoBehaviour
     }
 
     // Method to compare all pairs of items based on an array of tags
-    public void CompareAllSlotItems()
+    public bool CompareAllSlotItems()
     {
         bool allMatch = true;
 
@@ -70,5 +70,6 @@ public class GreenManager : MonoBehaviour
             Debug.Log("Not all items match.");
         
         }
-    }
+        return false;
+    } 
 }

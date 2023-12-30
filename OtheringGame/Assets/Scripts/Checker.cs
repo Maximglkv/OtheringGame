@@ -13,8 +13,19 @@ public class Checker : MonoBehaviour
     
     public void Comparison()
     {
-        greenManager.CompareAllSlotItems();
+        bool result = greenManager.CompareAllSlotItems();
         
+        if(result)
+        {
+            incorrect.SetActive(false);
+            correct.SetActive(true);
+        }
+
+        else
+        {
+            incorrect.SetActive(true);
+            correct.SetActive(false);
+        }
     }
 
 }
