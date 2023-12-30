@@ -32,6 +32,8 @@ public class DialogeTrigger : MonoBehaviour
         {
             visualCue.SetActive(false);
         }
+
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

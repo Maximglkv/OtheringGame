@@ -14,7 +14,7 @@ public class FeedingMinigame : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public Transform transform;
+    public new Transform transform;
     
     public CapsuleCollider2D capsuleCollider;
 

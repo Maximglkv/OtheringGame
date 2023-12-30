@@ -10,14 +10,18 @@ Thank you, sweetheart.#speaker:Father #portrait:parent_normal #layout:left
 player carefully attaches the feeding tube to the syringe and starts the process.#speaker: #portrait:Empty #layout:left
 
 //player 
-+Are you ready? Dad let me know if your comfortable #speaker:Player #portrait:player_normal #layout:left
-+Is this okay? This my first time doing this without mom #speaker:Player #portrait:player_normal #layout:left
-
+*[Are you ready? Dad let me know if your comfortable]
+Are you ready? Dad let me know if your comfortable#speaker:Player #portrait:player_normal #layout:left
+->bruh
+*[Is this okay? This my first time doing this without mom]
+    Is this okay? This my first time doing this without mom#speaker:Player #portrait:player_normal #layout:left
+    ->bruh
+===bruh===
 //Father
 Yes, it's fine.#speaker:Father #portrait:parent_normal #layout:left
 
  ~FeedGame()
-
+->END
 
 /*
 player finishes the feeding, disconnects the tube, and tidies up.#speaker: #portrait:Empty #layout:left

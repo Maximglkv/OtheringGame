@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private GameObject RythmMinigame;
     [SerializeField] private GameObject FeedMinigame;
+    [SerializeField] private GameObject PillMinigame;
     [SerializeField] private float typingSpeed = 0.04f;
     [SerializeField] private GameObject Volume;
     private Animator layoutAnimator;
@@ -73,7 +74,9 @@ public class DialogueManager : MonoBehaviour
         // return right away if dialogue isn't playing
         if (!dialogueIsPlaying)
         {
+            Volume.SetActive(false);
             return;
+            
         }
 
         // handle continuing to the next line in the dialogue when submit is pressed
@@ -82,6 +85,12 @@ public class DialogueManager : MonoBehaviour
         {
             ContinueStory();
         }
+
+        if (dialogueIsPlaying)
+        {
+            Volume.SetActive(true);
+        }
+        
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -89,7 +98,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-        Volume.SetActive(true);
+       
         currentStory.BindExternalFunction("RythmGame", () =>
         {
             RythmMinigame.SetActive(true);
@@ -100,8 +109,15 @@ public class DialogueManager : MonoBehaviour
         currentStory.BindExternalFunction("FeedGame", () =>
         {
             FeedMinigame.SetActive(true);
+            dialogueIsPlaying = true;
         });
-            
+        currentStory.BindExternalFunction("PillGame", () =>
+        {
+            PillMinigame.SetActive(true);
+            dialogueIsPlaying = true;
+            Volume.SetActive(true);
+        });
+
 
         // reset portrait, layout, and speaker
         displayNameText.text = "???";
@@ -115,10 +131,15 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         currentStory.UnbindExternalFunction("RythmGame");
+        currentStory.UnbindExternalFunction("FeedGame");
+        currentStory.UnbindExternalFunction("PillGame");
+        Volume.SetActive(true);
+
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        
     }
 
     private void ContinueStory()
