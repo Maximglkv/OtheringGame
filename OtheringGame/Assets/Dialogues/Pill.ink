@@ -18,17 +18,18 @@ Hey, sweetheart. How was your day? #speaker:Parent #portrait:parent_sad #layout:
     Okay. But that doesn't matter right now. How are you feeling?#speaker:Player #portrait:player_normal #layout:left
     ->Second
 * [Not good but I'm home now How are you]
-    Not good but I'm home now How are you #speaker:Player #portrait:player_sad #layout:left
+    Not good but I'm home now How are you? #speaker:Player #portrait:player_sad #layout:left
     ->Second
    
     
-    ===Second===
+===Second===
  You rush to his side, checking his pillboxes.
 
 I'm alright. Just a bit under the weather. #speaker:Parent #portrait:parent_sad #layout: right
 
-    Dad, you look pale. Why didn't you call me earlier? #speaker:Player #portrait:player_sad #layout:left
-    Didn't want to bother you, I'm sorry #speaker:Parent #portrait:parent_sad #layout: right
+Dad, you look pale. Why didn't you call me earlier? #speaker:Player #portrait:player_sad #layout:left
+    
+Didn't want to bother you, I'm sorry #speaker:Parent #portrait:parent_sad #layout: right
 
 Dad don't worry about it, I'll always be here for you. #speaker:Player #portrait:player_sad #layout:left
 

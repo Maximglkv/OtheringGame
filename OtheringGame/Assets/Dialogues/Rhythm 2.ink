@@ -4,10 +4,10 @@ EXTERNAL Dark_BG()
 Can you promise me something? I have one request#speaker:Father #portrait:parent_normal #layout:left
 //player
 *[Yes?]
-    Yes?#portrait:player_normal #layout:left
+    Yes?#speaker:player#portrait:player_normal #layout:left
 ->bruh
 *[What is it?]
-What is it?#portrait:player_normal #layout:left
+What is it?#speaker:Playerather#portrait:player_normal #layout:left
 ->bruh
 
 ===bruh===
@@ -24,7 +24,7 @@ Please just remember me and the memories we have together.
 I promise I will remember you..I love you, Dad.#speaker:Player #portrait:player_sad #layout:left
 
 //father
-I love you too#speaker:Player #portrait:player_sad #layout:left
+I love you too#speaker:Father #portrait:player_sad #layout:left
 ~Dark_BG()
 
 Few years later...#speaker: #portrait:Empty #layout:left

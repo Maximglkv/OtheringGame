@@ -21,7 +21,7 @@ public class Checker : MonoBehaviour
             correct.SetActive(true);
         }
 
-        else
+        else 
         {
             incorrect.SetActive(true);
             correct.SetActive(false);
