@@ -17,6 +17,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject RythmMinigame;
     [SerializeField] private GameObject FeedMinigame;
     [SerializeField] private GameObject PillMinigame;
+    [SerializeField] private GameObject Park_BG;
+    [SerializeField] private GameObject Neighbour_BG;
+    [SerializeField] private GameObject Credits_BG;
     [SerializeField] private float typingSpeed = 0.04f;
     [SerializeField] private GameObject Volume;
     private Animator layoutAnimator;
@@ -117,6 +120,30 @@ public class DialogueManager : MonoBehaviour
             dialogueIsPlaying = true;
             Volume.SetActive(true);
         });
+        currentStory.BindExternalFunction("Park_BG", () =>
+        {
+            Neighbour_BG.SetActive(false);
+            Park_BG.SetActive(true);
+            dialogueIsPlaying = true;
+
+
+        });
+        currentStory.BindExternalFunction("Neighbour_BG", () =>
+        {
+            Park_BG.SetActive(false);
+            Neighbour_BG.SetActive(true);
+            dialogueIsPlaying = true;
+
+
+        });
+        currentStory.BindExternalFunction("Credits_BG", () =>
+        {
+           // Park_BG.SetActive(false);
+            Credits_BG.SetActive(true);
+            dialogueIsPlaying = true;
+
+
+        });
 
 
         // reset portrait, layout, and speaker
@@ -133,7 +160,12 @@ public class DialogueManager : MonoBehaviour
         currentStory.UnbindExternalFunction("RythmGame");
         currentStory.UnbindExternalFunction("FeedGame");
         currentStory.UnbindExternalFunction("PillGame");
+        currentStory.UnbindExternalFunction("Park_BG");
+        currentStory.UnbindExternalFunction("Neighbour_BG");
+        currentStory.UnbindExternalFunction("Credits_BG");
         Volume.SetActive(true);
+        Park_BG.SetActive(false);
+        Neighbour_BG.SetActive(false);
 
 
         dialogueIsPlaying = false;

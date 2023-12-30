@@ -1,12 +1,12 @@
 EXTERNAL PillGame()
 ->main
 ===main=== 
-door closes behind you.#speaker:Player #portrait:player_normal #layout:left
+You enter the living room #speaker:  #portrait:Empty #layout:right 
 * [Dad? I'm home.]
-    Dad? I'm home.
+    Dad? I'm home.#speaker:Player #portrait:player_normal #layout:left
     ->First
 *[Say nothing]
-You say nothing #speaker:  #portrait:Empty #layout:right home
+You say nothing #speaker:  #portrait:Empty #layout:right 
 -> First
     
 
@@ -34,12 +34,12 @@ Dad don't worry about it, I'll always be here for you. #speaker:Player #portrait
 
 Mom's not home til later let me check what needs to be done #speaker:Player #portrait:player_sad #layout:left
 
-father watches her, a mix of gratitude and worry in his eyes.#speaker:  #portrait:Empty #layout:right home
+father watches her, a mix of gratitude and worry in his eyes.#speaker:  #portrait:Empty #layout:right 
 
 I'm sorry for being a burden.#speaker:Parent #portrait:parent_sad #layout: right
 
 (chuckles weakly)
 Guess the roles reverse as we grow older.#speaker:Parent #portrait:parent_happy #layout: right
-reaches for her hand, giving it a weak squeeze.#speaker:  #portrait:Empty #layout:right home
+reaches for her hand, giving it a weak squeeze.#speaker:  #portrait:Empty #layout:right 
 ~PillGame()
 ->END

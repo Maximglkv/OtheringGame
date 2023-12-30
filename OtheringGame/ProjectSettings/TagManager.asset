@@ -47,6 +47,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 4142592009
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 204150105
+    locked: 0
+  - name: Furniture
+    uniqueID: 792436747
     locked: 0
