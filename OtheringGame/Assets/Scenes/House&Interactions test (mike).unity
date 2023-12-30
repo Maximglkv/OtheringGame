@@ -402,7 +402,6 @@ MonoBehaviour:
   RythmMinigame: {fileID: 1458327006}
   FeedMinigame: {fileID: 0}
   typingSpeed: 0.04
-  Volume: {fileID: 0}
   choices:
   - {fileID: 1151036682}
   - {fileID: 1081190621}
@@ -6645,9 +6644,7 @@ MonoBehaviour:
   moveOverTime: 0
   rb: {fileID: 620380301}
   transform: {fileID: 620380299}
-  capsuleCollider: {fileID: 0}
   progressBar: {fileID: 454828882}
-  Green: 0
 --- !u!212 &620380303
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20472,7 +20469,7 @@ Transform:
   m_GameObject: {fileID: 1837560828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70.72, y: 15.97, z: -9.938019}
+  m_LocalPosition: {x: -56.83, y: 14.51, z: -9.938019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22693,7 +22690,6 @@ GameObject:
   - component: {fileID: 2103229774}
   - component: {fileID: 2103229772}
   - component: {fileID: 2103229771}
-  - component: {fileID: 2103229776}
   - component: {fileID: 2103229775}
   m_Layer: 0
   m_Name: Charachter
@@ -22715,7 +22711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  anim: {fileID: 2103229776}
 --- !u!50 &2103229772
 Rigidbody2D:
   serializedVersion: 4
@@ -22752,7 +22747,7 @@ Transform:
   m_GameObject: {fileID: 2103229770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70.72, y: 15.97, z: 0.061981}
+  m_LocalPosition: {x: -56.83, y: 14.51, z: 0.061981}
   m_LocalScale: {x: 0.6347288, y: 0.6347288, z: 0.6347288}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22804,27 +22799,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7322674, y: 1.0830894}
   m_EdgeRadius: 0
---- !u!95 &2103229776
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103229770}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad152e7e6e83cb54e86022b2bd4eb1d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2122152465
 GameObject:
   m_ObjectHideFlags: 0
